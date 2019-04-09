@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".BeerCounter"
+    tools:deviceIds="wear">
+
+    <FrameLayout
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:boxedEdges="none">
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="48dp"
+            tools:text="0🍺" />
+
+        <TextView
+            android:id="@+id/minusButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="-🍺"
+            android:textSize="@dimen/action_drawer_item_text_size"
+            android:paddingTop="@dimen/peek_view_top_padding"
+            android:paddingBottom="@dimen/peek_view_bottom_padding"
+            android:background="@color/blue"
+            />
+
+    </FrameLayout>
+</android.support.wear.widget.BoxInsetLayout>
